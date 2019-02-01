@@ -57,3 +57,4 @@ echo $data;
 <br>
 <br>
 <a href="create.php?id=0">Tilføj produkt</a>
+<?php include("../extra/UI/footer.php"); ?>

@@ -58,6 +58,5 @@ if ($id || $id===0 ){
     </form>
 <?php } else{ ?>
     <h1>Ugyldigt product</h1>
-<?php }  ?>
+<?php } include('../extra/footer.php'); ?>
 
-<?php include('../extra/footer.php'); ?>
