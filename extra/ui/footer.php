@@ -1,13 +1,10 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: FK
- * Date: 01-Feb-19
- * Time: 2:11 PM
- */
 
 <!-- begin footer -->
+
+</div>
+<div class="divider"></div>
 <p>Projekt til Rito - Fadil Kurtovic.</p>
+</div>
 </body>
 </html>
 <!-- end footer -->
