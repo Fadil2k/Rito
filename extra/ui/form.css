@@ -1,0 +1,18 @@
+    <style>
+        label {
+            width: 100px !important;
+            display: inline-block !important;
+            vertical-align: top !important;
+        }
+        textarea {
+            width: 450px !important;
+            height: 150px !important;
+        }
+        input, textarea {
+            margin: 0 0 10px 0 !important;
+            border: 1px solid black !important;
+        }
+        .panel {
+            float: left !important;
+        }
+    </style>

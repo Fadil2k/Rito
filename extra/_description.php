@@ -1,5 +1,5 @@
 <?php
-// Værdierne er baseret på prod id og sprog
+// Værdierne er baseret på product id og sprog
 $desc = json_decode($crud->getProductDescriptions($product->products_id,$language->languages_id));
 
 //Hvis værdien 0 blev sendt, bliver resultatet null
@@ -15,29 +15,32 @@ if($desc->products_description_id==null){
 // Dette eksempel betyder, at products_description_name vil blive ændret for beskrivelsen med id 10
 // Denne fil vil blive tilføjet afhængigt af antallet af sprog, hvis der er 8 vil den blive tilføjet 8 gange.
 ?>
- <style>
-        label {
-            width: 100px !important;
-            display: inline-block !important;
-            vertical-align: top !important;
-        }
-        textarea {
-            width: 450px !important;
-            height: 150px !important;
-        }
-        input, textarea {
-            margin: 0 0 10px 0 !important;
-            border: 1px solid black !important;
-        }
-        .form {
-            width: 481px !important;
-            float: left !important;
-        }
-    </style>
-<div class="form">
-<h2><?php echo $language->languages_name; ?></h2>
-<input type="hidden" name="desc[<?php echo $currId; ?>][languages_id]" value="<?php echo $language->languages_id; ?>">
-<label>Varenavn:</label> <input type="text" name="desc[<?php echo $currId; ?>][products_description_name]" value="<?php echo $desc->products_description_name; ?>"><br>
-<label>Korttekst:</label> <textarea name="desc[<?php echo $currId; ?>][products_description_short_description]"><?php echo $desc->products_description_short_description  ; ?></textarea><br>
-<label>Langtekst:</label> <textarea name="desc[<?php echo $currId; ?>][products_description_description]"><?php echo $desc->products_description_description; ?></textarea><br>
+<link rel="stylesheet" href="../extra/UI/form.css">
+
+   <div class="panel">
+   <div class="panel-header">
+    <div class="panel-title"><span class="label label-rounded label-primary"><?php echo $language->languages_name; ?></span></div>
+    </div>
+    <div class="panel-body">
+   
+    <div class="form">
+
+    
+    <input type="hidden" name="desc[<?php echo $currId; ?>][languages_id]" value="<?php echo $language->languages_id; ?>"> <br>
+
+    <label>Varenavn</label>
+    <input type="text" name="desc[<?php echo $currId; ?>][products_description_name]" value="<?php echo $desc->products_description_name; ?>">
+    <br>
+
+
+     <textarea name="desc[<?php echo $currId; ?>][products_description_short_description]"><?php echo $desc->products_description_short_description  ; ?></textarea>
+     <span class="label">Kort tekst</span>
+     <br>
+
+     <textarea name="desc[<?php echo $currId; ?>][products_description_description]"><?php echo $desc->products_description_description; ?></textarea>
+      <span class="label">Lang tekst</span>
+      <br><br>
+
+</div>
+  </div>
 </div>
