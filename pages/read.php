@@ -38,7 +38,7 @@ if (count($products) > 0) {
                 <td>' . $product['products_price'] . '</td>
                 <td>' . $product['products_id'] . '</td>
                 <td>
-                <a href="pages/edit.php?id='.$product['products_id'].'" class="btn btn-warning">Rediger</a></td>
+                <a href="edit.php?id='.$product['products_id'].'" class="btn btn-warning">Rediger</a></td>
                 <td>
                 <a href="extra/delete.php?id='.$product['products_id'].'" class="btn btn-danger">Slet</a></td>
             </tr>';

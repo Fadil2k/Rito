@@ -125,7 +125,7 @@ class CRUD
      * Get Details
      * */
     public function getLanguages(){
-        $query = $this->db->prepare("SELECT * FROM rito.languages");
+        $query = $this->db->prepare("SELECT * FROM languages");
         $query->execute();
         return json_encode($query->fetchAll(PDO::FETCH_ASSOC));
     }
@@ -160,7 +160,7 @@ VALUES (:products_id, :languages_id, :products_description_name, :products_descr
         $query->bindParam("products_description_short_description", $products_description_short_description, PDO::PARAM_STR);
         $query->bindParam("products_description_description", $products_description_description, PDO::PARAM_STR);
         $query->execute();
-        header('location:read.php');
+        header('location:index.php');
     }
 
 }
